@@ -1,0 +1,27 @@
+body{
+    font-family: Arial;
+}
+nav{
+    border: 1px solid darkgreen;
+    width: 22em;
+    margin: 20px;
+    padding: 0.3em;
+}
+li{
+    background-color: darkblue ;
+    list-style-type: none;
+    /*float: right;*/
+    width: 10%;
+    display: inline;
+    margin: 0.3em;
+    padding: 0.2em;
+
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: yellow;
+}

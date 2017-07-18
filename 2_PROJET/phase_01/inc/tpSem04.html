@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div id='rechercheDeGroupe'>
+    <form name='groups' action='#' method='GET' oninput="filtre(this)" onchange="filtre(this)" onsubmit='return false;'>
+        <fieldset id='recherGroup' name='rechercheGroupe'>
+            <legend>Groupe recherché</legend>
+
+            <input class='inputGroup' id="rechGroup" type='text' name='rechGroup' placeholder='nom du groupe recherché' value='' autocomplete="off"><br>
+            <<<input class='inputGroup' type='radio' name='group' title='début' value='debut'>
+            ><input class='inputGroup' type='radio' name='group' title='dedant' value='dedant' checked><
+            <input class='inputGroup' type='radio' name='group' title='fin' value='fin'>>>
+        </fieldset>
+        <fieldset id='selection' name='selection'>
+            <legend>Suggestion</legend>
+            <select id="selectGroup" name="selectGroup" title='select group' size="10" oninput="monChoix(this);" data-url="listeCours.html" data-dest="futurTable"></select>
+        </fieldset>
+        <fieldset id='listeDesCours' name='listeDesCours'>
+            <legend>Liste des cours</legend>
+
+            <div id='futurTable' name='table'></div>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

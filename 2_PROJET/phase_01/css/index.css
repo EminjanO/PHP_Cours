@@ -1,0 +1,209 @@
+/* ==============================================
+   FEUILLE DE STYLES DES GABARITS HTML/CSS --- 04
+   © Elephorm & Alsacreations.com
+   Conditions d'utilisation:
+   http://creativecommons.org/licenses/by/2.0/fr/
+   ============================================== */
+
+
+/* --- COULEURS --- */
+
+/* Note: vous pouvez modifier simplement l'aspect de ce gabarit en modifiant
+   uniquement les couleurs de fond (propriétés background) et les couleurs
+   du texte (propriété color).
+   Pour modifier la disposition des blocs, voir plus bas dans la feuille de
+   styles la partie «positionnement». */
+
+/* Général */
+body {
+    color: #F0E39E;
+    background: #2C2F22;
+}
+a {
+    color: #FF6533;
+}
+a:hover, a:focus {
+    color: #FF4C00;
+}
+strong {
+    color: #A1B55D;
+}
+
+/* Navigation */
+#navigation {
+    background: #181A12;
+}
+#navigation a {
+    color: #FF6533;
+}
+#navigation a:hover, #navigation a:focus {
+    background: #000000;
+}
+
+/* Contenu principal */
+#contenu {
+    color: #363B29;
+    background: #cbd888;
+    margin-top: 4.7%;
+    width: 73.2%;
+}
+#contenu a {
+    color: #332510;
+}
+#contenu a:hover, #contenu a:focus {
+    color: #6E5122;
+}
+#contenu strong {
+    color: #181A12;
+}
+
+
+/* --- POSITIONNEMENT --- */
+
+/* Page */
+body {
+    padding: 20px 50px; /* Voir -> Note 1 ci-dessous */
+}
+
+/* En-tête */
+#entete {
+    padding: 20px 0;
+}
+#entete h1 {
+    margin: 0;
+}
+#entete h1 img {
+    float: left;
+    margin: 7px 20px 10px 0;
+}
+#entete .sous-titre {
+    margin: 4px 0 15px 0;
+}
+
+/* Menu de navigation */
+
+#navigation {
+    width: 18%;
+    float: left; /* -> 2 */
+}
+#navigation ul {
+    margin: 0;
+    padding: 20px 10px;
+    list-style: none;
+}
+#navigation a {
+    display: block;
+    height: 1%; /* -> 3 */
+    padding: 6px 6px 6px 10px;
+    line-height: 1.5;
+    font-size: .9em;
+    text-decoration: none;
+}
+
+/* Contenu */
+#contenu {
+    margin-left: 20%; /* -> 4 */
+    margin-top: 51px;
+    padding: 10px 20px;
+}
+#contenu > :first-child {
+    margin-top: 10px;
+}
+#contenu p, #contenu li {
+    line-height: 1.5;
+}
+
+/* Mention de paternité */
+#copyright {
+    margin-right: 3.4%;
+}
+
+
+
+/* menus */
+.menu {
+    background: #181A12;
+}
+.menu a {
+    color: #FF6533;
+    border: solid 0.2em #181A12;
+    padding: 0.5em 1em;
+}
+.menu a:hover, .menu a:focus {
+    background: #000000;
+    background-color: #282828;
+    border-radius: 0.75em;
+    border-color: #CCCCCC;
+}
+
+/* --- POSITIONNEMENT --- */
+/* Menu de navigation */
+#menu {
+    width: 90%;
+    float: left;
+}
+#menu ul {
+    margin: 0;
+    list-style: none;
+}
+#menu li {
+    float: left;
+    padding: 10px 0;
+}
+#menu li a {
+    display: block;
+    height: 1%;
+    padding: 6px 6px 6px 10px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: .9em;
+    text-decoration: none;
+}
+
+/* Sous-menu de navigation */
+#sous-menu {
+    width: 18%;
+    margin-top: 2%;
+    float: left; /* -> 2 */
+}
+#sous-menu ul {
+    margin: 0;
+    padding: 20px 10px;
+    list-style: none;
+}
+#sous-menu a {
+    display: block;
+    height: 1%; /* -> 3 */
+    padding: 6px 6px 6px 10px;
+    line-height: 1.5;
+    font-size: .9em;
+    text-decoration: none;
+}
+/* Credits */
+#credit {
+    display: block;
+}
+
+/* Table des livres */
+#books {
+    border-collapse: collapse;
+}
+#books th {
+    background-color: #CBC777;
+    text-align: left;
+}
+#books, #books td, #books th{
+    border: 1px dashed black;
+    padding:0.2em;
+    text-align: center;
+}
+#books tr:nth-child(even) {background: #CBC777}
+fieldset {
+    float : left;
+}
+#rechercheDeGroupe {
+    height:80px;
+}
+#contenu {
+    overflow:auto;
+}

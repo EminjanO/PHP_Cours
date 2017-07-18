@@ -1,0 +1,66 @@
+<html>
+<head>
+    <script src="/ALL/jQ/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="/ALL/jQui/jquery-ui.1.12.1.min.js" type="text/javascript"></script>
+    <script src="/ALL/dTable/dataTables.jqueryui.js" type="text/javascript"></script>
+    <script src="/ALL/dTable/jquery.dataTables.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/ALL/dTable/datatables.min.css">
+
+    <!--<script src="/ALL/dTable/dataTables.responsive.min.js" type="text/javascript"></script>-->
+    <!--<link rel="stylesheet" href="/ALL/dTable/responsive.dataTables.min.css">-->
+    <script async>
+        $(document).ready(function() {
+            $('body').append('<table class="table"><thead id="thead"></thead><tbody id="tbody"></tbody><tfoot id="tfoot"></tfoot></table>');
+
+            $.ajax({
+                type: 'GET',
+                url: 'server.php?rq=datatable'
+            }).done(function(data) {
+                console.table(JSON.parse(data));
+                createTable(JSON.parse(data));
+            }).then(function () {
+                $('.table').dataTable({ // try .dataTable or .Datatable
+                    responsive: true,
+                    language: {
+                        url: '//cdn.datatables.net/plug-ins/1.10.15/i18n/French.json'
+                    },
+                    lengthMenu: [[5, 10, 15, 20, -1], [5, 10, 15, 20, 'All']], // menu of the number of elements. -1 = All
+                    columnDefs: [
+                        {targets: [1]}, // when we click on a column (here, column 1), we sort
+                        {orderData: [1, 2]} // how we sort data ? here major sort on column 1, minor sort on column 2
+                    ],
+                    pageLength: 10 // default number of elements
+                });
+            }).fail(function(error) {
+                console.warn(error);
+            });
+        });
+
+        function makeTd(s) {
+            return ('<tr>' + s + '</tr>');
+        }
+
+        function createTable(table) {
+            var thead = ['ref'].concat(Object.keys(table[Object.keys(table)[0]]));
+            var theadToHtml = thead.reduce(function(acc, h) {
+                return acc += '<th>' + h + '</th>';
+            }, '<tr>') + '</tr>';
+
+            $('#thead').append(theadToHtml);
+
+            for (var ref in table) {
+                var s = '';
+                s += '<td>' + ref + '</td>';
+                for (var content in table[ref]) {
+                    s += '<td>' + table[ref][content] + '</td>'
+                }
+                s = makeTd(s);
+                $('#tbody').append(s);
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

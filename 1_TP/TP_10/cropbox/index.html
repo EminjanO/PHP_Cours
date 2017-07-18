@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Crop Box</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script src="/ALL/jQ/jquery-3.1.1.min.js"></script>
+    <script src="/ALL/jQui/jquery-ui.1.12.1.min.js"></script>
+    <style>
+        .container {
+            display: flex;
+            margin: 2em;
+            width: 800px;
+        }
+        .action {
+            width: 400px;
+            height: 30px;
+            margin: 10px 0;
+        }
+        .cropped > img {
+            margin-right: 10px;
+        }
+        #drop {
+            display: flex;
+        }
+        #drop fieldset {
+            height: 100px;
+            width: 100px;
+            border: 1px dashed grey;
+        }
+        #drop fieldset legend {
+            text-align: center;
+            padding: 0 10px;
+            border: 1px solid grey;
+            border-radius: 3px;
+        }
+
+        #trashcan.trashFull {
+            background-image: url(img/trashcan-full-icon.png);
+            cursor: pointer;
+        }
+
+        fieldset img {
+            width: 90%;
+            height: 90%;
+        }
+
+        .cropped {
+            max-width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="cropped"></div>
+    <div class="crop-container">
+        <div class="imageBox">
+            <div class="thumbBox"></div>
+            <div class="spinner" style="display: none">Loading...</div>
+        </div>
+        <div class="action">
+            <div id="base">
+                <input type="file" id="file" style="float:left; width: 250px">
+                <input type="button" id="btnZoomIn" value="+">
+                <input type="button" id="btnZoomOut" value="-">
+                <input type="button" id="btnCrop" value="Crop">
+            </div>
+            <div id="drop">
+                <fieldset id="avatar">
+                    <legend>Avatar</legend>
+                </fieldset>
+                <fieldset id="trash">
+                    <legend>Trash</legend>
+                    <img src="img/trashcan-empty-icon.png" id="trashcan">
+                </fieldset>
+                <fieldset id="send">
+                    <legend>Send</legend>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/cropbox.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        const options = {
+            thumbBox: '.thumbBox',
+            spinner: '.spinner',
+            imgSrc: 'img/avatar.png'
+        };
+        let cropper = $('.imageBox').cropbox(options);
+
+        $('#file').on('change', function() {
+            const reader = new FileReader();
+            reader.onload = e => {
+                options.imgSrc = e.target.result;
+                cropper = $('.imageBox').cropbox(options);
+            };
+            reader.readAsDataURL(this.files[0]);
+            this.files = null;
+        });
+
+        $('#btnCrop').on('click', function(){
+            const img = cropper.getDataURL();
+            $('.cropped').append("<img src=" + img + ">").draggable()
+            //$('.cropped').
+        });
+
+        $('#btnZoomIn').on('click', function(){
+            cropper.zoomIn();
+        });
+
+        $('#btnZoomOut').on('click', function(){
+            cropper.zoomOut();
+        });
+
+        $('#trash')
+            .droppable({
+                activeClass : 'highlight',
+                drop: function (evt, ui) {
+                    console.log('TRASH');
+                    // ui.helper is the element
+                    ui.helper.hide('explode');
+                    $('.cropped').remove();
+                    //$(this).addClass('trashFull');
+                }
+            });
+            /*.click(function(evt) {
+                if ($(this).hasClass('trashFull')) {
+                    $('.dialog-confirm').dialog('open');
+                }
+            });*/
+
+        $('#send')
+            .droppable({
+                drop: function (evt, ui) {
+                    console.log('DROPPPP');
+                    ui.draggable.fadeOut();
+                    const imgsrc = ui.draggable.find('img').attr('src'); // b64
+                    $('#avatar').append('<img src=' + imgsrc + '>');
+                    ajaxImg(imgsrc);
+                }
+            });
+
+        function ajaxImg(base64image) {
+            $.ajax({
+                type: 'POST',
+                url: 'server.php?rq=saveimage',
+                data: {
+                    img: base64image
+                }
+            }).done(function() {
+                console.log('saved my man !');
+            }).fail(function() {
+                console.warn('not saved my man.');
+            }).always(function() {
+                $('.cropped').remove();
+            });
+            // we can also use .then #promiseStuff
+        }
+    });
+</script>
+
+</body>
+</html>
