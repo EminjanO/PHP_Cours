@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>up_form_6</title>
+		<script type="text/javascript" src="JS/up_form_3.js"></script>
+		<script type="text/javascript" src="JS/utils.js"></script>
+	</head>
+	<body>
+		<form method="post" action="upload_6.php" enctype="multipart/form-data">
+			<label for="fichier">un fichier :</label><br>
+			<input type="file" name="fichierUpload" id="fichier" onchange="verif(this)"/><br>
+			<label for="id">nommer avec ce numéro</label><br>
+			<input type="number" name="id" id="id" step="1" min="1" max="64"><br>
+			<input type="hidden" name="maxFileSize" value="post_max_size"/>
+			<input type="submit" name="submit" value="Envoyer" />
+		</form>
+		<div id="afficheInfo"></div>
+	</body>
+</html>

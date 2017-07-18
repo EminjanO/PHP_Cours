@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact</title>
+</head>
+<body>
+	<section>
+		<form id="formContact" action="mail_2.php" method="post">
+			<fieldset>
+				<legend>Formulaire de contact</legend>
+				<label for="destinataire">Votre email : </label>
+				<input type="email" id="destinataire" name="destinataire" value=""><br>
+				
+				<label for="sujet">Sujet du message : </label>
+				<input type="text" id="sujet" name="sujet" value=""><br>
+				
+				<label for="message">Message : </label>
+				<textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+				<input type="submit" id="envoyer" name="envoyer" value="envoyer">
+			</fieldset>
+		</form>
+	</section>
+</body>
+</html>
