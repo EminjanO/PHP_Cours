@@ -7,23 +7,38 @@ SHOW DATABASES;
 SHOW TABLES;
 
 # 4.liste des champs de la table etudiants
+SHOW columns
+FROM etudiants;
+
 EXPLAIN etudiants;
 DESCRIBE etudiants;
 
 ##### phaseII #####
 
-#1 
+#1 Allez dans la base de données world
 USE world;
-#2
+#2 Affichez la liste des tables disponibles
 SHOW TABLES;
-#3
+#3 Affichez la structure des tables.
 SHOW CREATE TABLE city;
-@193.190.65.94
-#4
+DESCRIBE city; DESCRIBE country; DESCRIBE countrylanguage;
+#4 Dessinez le schéma relationnel de la base de données
+(Tables : contenus, types, clés ; Liens entre les tables)
+
+### Minicampus
+# Afficher la liste des tables disponibles :
+SHOW tables
+Afficher la structure des tables :
+DESCRIBE class; DESCRIBE class_user;
+DESCRIBE cours; DESCRIBE course_class;
+ESCRIBE cours_user; DESCRIBE faculte; DESCRIBE user;
+
+# Dessinez le schéma relationnel des tables
+
 
 ##### phaseIII #####
 
-# Partie 1. : travail "mono table"
+# Partie 1. : travail "mono table" -> dans world
 
 # Afficher la plus grande superficie pour un pays
 SELECT
@@ -195,6 +210,10 @@ FROM
 		GROUP BY Continent ) ct2 ON ct1.Continent = ct2.Continent
 																AND ct1.IndepYear = ct2.maxIndepYear
 ORDER BY ct1.Continent, ct1.Name;
+
+
+
+
 
 #  2. Dans `minicampus` : mono-table
 
