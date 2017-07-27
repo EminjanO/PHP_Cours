@@ -23,15 +23,16 @@ SHOW TABLES;
 SHOW CREATE TABLE city;
 DESCRIBE city; DESCRIBE country; DESCRIBE countrylanguage;
 #4 Dessinez le schéma relationnel de la base de données
-(Tables : contenus, types, clés ; Liens entre les tables)
+###(Tables : contenus, types, clés ; Liens entre les tables)
 
 ### Minicampus
 # Afficher la liste des tables disponibles :
-SHOW tables
-Afficher la structure des tables :
+SHOW tables;
+
+#Afficher la structure des tables :
 DESCRIBE class; DESCRIBE class_user;
 DESCRIBE cours; DESCRIBE course_class;
-ESCRIBE cours_user; DESCRIBE faculte; DESCRIBE user;
+DESCRIBE cours_user; DESCRIBE faculte; DESCRIBE user;
 
 # Dessinez le schéma relationnel des tables
 
@@ -96,37 +97,36 @@ WHERE
 
 # Partie 2 : travail "multi table"
 
-# Pour les pays du "BENELUX":
+# 1. Pour les pays du "BENELUX":
 # donnez, le nom du pays, la population du pays et la population totale des villes du pays reprise dans la table des villes
 
 SELECT
-	c.name AS pays,
-	c.Population AS popuPays,
-	SUM( v.Population ) AS popuVilles
+    c.name AS pays,
+    c.Population AS popuPays,
+    SUM(v.Population) AS popuVilles
 FROM
-	country AS c
-	INNER JOIN
-	city AS v
-		ON c.Code = v.countrycode
+    country AS c
+        INNER JOIN
+    city AS v ON c.Code = v.countrycode
 WHERE
-	c.name IN ( 'Belgium', 'netherlands', 'Luxembourg' )
+    c.name IN ('Belgium' , 'netherlands', 'Luxembourg')
 GROUP BY c.name;
 
 ## ou bien
 
 SELECT
-	c.name AS pays,
-	c.Population AS popuPays,
-	SUM( v.Population ) AS popuVilles
+    c.name AS pays,
+    c.Population AS popuPays,
+    SUM(v.Population) AS popuVilles
 FROM
-	country AS c
-	INNER JOIN
-	city AS v ON c.Code = v.countrycode
+    country AS c
+        INNER JOIN
+    city AS v ON c.Code = v.countrycode
 WHERE
-	c.code IN ( 'BEL', 'NLD', 'LUX' )
+    c.code IN ('BEL' , 'NLD', 'LUX')
 GROUP BY c.code;
 
-# donnez en ordre décroissant sur les pourcentages, les noms et les pourcentages des langues parlées
+#2. donnez en ordre décroissant sur les pourcentages, les noms et les pourcentages des langues parlées
 
 SELECT DISTINCT
 	l.language AS 'language',
@@ -145,9 +145,9 @@ FROM
 WHERE
 	c.code IN ( 'BEL', 'NLD', 'LUX' )
 GROUP BY l.language
-ORDER BY pct DESC
+ORDER BY pct DESC;
 
-# donnez le pourcentage de personnes qui parlent une langue officielle
+#3. donnez le pourcentage de personnes qui parlent une langue officielle
 
 SELECT
 	ROUND( SUM( ( cl.Percentage / 100 ) * ct.Population ) / (
@@ -163,7 +163,7 @@ FROM
 WHERE
 	cl.isOfficial = 'T';
 
-# donnez le pourcentage de personnes qui ne parlent pas une langue officielle
+#4. donnez le pourcentage de personnes qui ne parlent pas une langue officielle
 
 SELECT
 	ROUND( SUM( ( cl.Percentage / 100 ) * ct.population ) / (
@@ -183,7 +183,7 @@ WHERE
 
 # 1. Dans `world` : mono-table
 
-# Afficher la superficie de chacune des régions d'Europe
+# 1) Afficher la superficie de chacune des régions d'Europe
 
 
 SELECT
@@ -195,7 +195,7 @@ WHERE
 	AND ct.Region LIKE '%Europe'
 GROUP BY ct.Region;
 
-#  Pour chacun des continents, afficher le(s) pays qui a (ont) eu leur indépendance le plus récemment
+#  2) Pour chacun des continents, afficher le(s) pays qui a (ont) eu leur indépendance le plus récemment
 
 SELECT
 	ct1.Name, ct1.Continent, ct1.IndepYear
@@ -217,7 +217,7 @@ ORDER BY ct1.Continent, ct1.Name;
 
 #  2. Dans `minicampus` : mono-table
 
-#  Afficher la liste des facultés "de base" (Celles qui n'ont pas de parent)
+# 1. Afficher la liste des facultés "de base" (Celles qui n'ont pas de parent)
 
 SELECT
 	*
@@ -226,7 +226,7 @@ FROM
 WHERE
 	faculte.codeParent IS NULL;
 
-#  Afficher les "filles" d'une faculté donnée (p.e. TI)
+# 2. Afficher les "filles" d'une faculté donnée (p.e. TI)
 
 SELECT
 	*
@@ -235,7 +235,7 @@ FROM
 WHERE
 	faculte.codeParent = 'TI';
 
-#  Afficher la liste des classes "de base" (celles qui n'ont pas de parent)
+# 3.  Afficher la liste des classes "de base" (celles qui n'ont pas de parent)
 
 SELECT
 	*
@@ -244,7 +244,7 @@ FROM
 WHERE
 	class.parent_id IS NULL;
 
-#  Afficher les "filles" d'une "section" donnée (p.e TI)
+# 4. Afficher les "filles" d'une "section" donnée (p.e TI)
 
 SELECT
 	class.nom AS 'nomFilles(TI)'
@@ -270,7 +270,7 @@ WHERE
 
 #  3. Dans `minicampus` : multi-tables
 
-#  Pour tous les étudiants, afficher les informations suivantes :
+#  1) Pour tous les étudiants, afficher les informations suivantes :
 # Groupe, Matricule, Nom, Prénom, Email (construit : matricule@students...)
 ########################## pas du bon repense
 SELECT
@@ -289,7 +289,7 @@ FROM
 WHERE
 	user.username LIKE 'HE%';
 
-#  Afficher la liste des cours (code, faculté et libellé) pour une classe donnée (p.e. 1TL2)
+# 2)  Afficher la liste des cours (code, faculté et libellé) pour une classe donnée (p.e. 1TL2)
 
 SELECT
 	cours.code, faculte, cours.intitule
@@ -302,10 +302,10 @@ FROM
 WHERE
 	class.nom = '1TL2';
 
-#  Pour chacune des "facultés", afficher ces informations précédées du nom de son "parent"
+# 3)  Pour chacune des "facultés", afficher ces informations précédées du nom de son "parent"
 
 SELECT
-	f2.nom,
+	f2.nom as nom_parent,
 	f1.id,
 	f1.nom,
 	f1.code,
@@ -318,6 +318,7 @@ FROM
 	minicampus.faculte f2 ON f1.codeParent = f2.code
 WHERE
 	f1.codeParent IS NOT NULL;
+
 
 
 

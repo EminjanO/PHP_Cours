@@ -163,6 +163,7 @@ function monPrint_r(&$liste)
     $out .= "</pre><hr></div>";
     return $out;
 }
+
 /*
 
 // $a = ['a'=>'bonjour','b'=>[1=>'le',0=>'monde']]; //pour tester
