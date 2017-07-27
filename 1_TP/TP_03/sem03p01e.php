@@ -32,11 +32,12 @@ $sql = "SELECT
 try
 {
 	$dbh = new PDO ("mysql:host = " . getServer() . ';dbName = ' . $dbName,
-	                $__INFOS__['user'], $__INFOS__['pswd']);
+	                $__INFOS__['user'], $__INFOS__['pswd'], array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 	
 	//$query = $dbh->query($sql);
 	$db = $dbh->query($sql, PDO::FETCH_ASSOC)->fetchAll();
-	echo creeTableau($db, 'avec titre', 1);
+	echo creeTableau($db, 'avec index', 1);
+	echo creeTableau($db, 'sans index');
 	$dbh = null;
 }
 catch (PDOException $e)

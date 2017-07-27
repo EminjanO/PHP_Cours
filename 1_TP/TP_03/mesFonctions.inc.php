@@ -31,7 +31,7 @@ function scriptInfos($p="info")
     if($count==0)
     {
         if(!defined('__SCRIPT_NAME__')) define('__SCRIPT_NAME__',$_SERVER["SCRIPT_NAME"]);
-        if(!defined('__SCRIPT_DNS__')) define('__SCRIPT_DNS__',$_SERVER["USERDOMAIN"]);
+        if(!defined('__SCRIPT_DNS__')) define('__SCRIPT_DNS__',$_SERVER["SERVER_NAME"]); // avant c'était $_SERVER["USERDOMAIN"]
         if(!defined('__SCRIPT_PATH__')) define('__SCRIPT_PATH__',$_SERVER["PATH_TRANSLATED"]);
         if(!defined('__SCRIPT_PROTOCOL__')) define('__SCRIPT_PROTOCOL__',$_SERVER["SERVER_PROTOCOL"]);
 
@@ -57,7 +57,7 @@ function scriptInfos($p="info")
 
     $scriptFullPath = __SCRIPT_PROTOCOL__."/".__SCRIPT_DNS__.__SCRIPT_NAME__;//le chemin complet (protocole + dns + path + nom)
     // C'est le retour par défaut (si aucun paramètre lors de l'appel)
-    $scriptInfos = array("scriptName" =>$_SERVER["SCRIPT_NAME"] , "scriptDns" =>$_SERVER["USERDOMAIN"],
+    $scriptInfos = array("scriptName" =>$_SERVER["SCRIPT_NAME"] , "scriptDns" =>$_SERVER["SERVER_NAME"],
         "scriptPath"=>$_SERVER["PATH_TRANSLATED"], "scriptProtocol"=>$_SERVER["SERVER_PROTOCOL"]);
 
     $variables = array('scriptName', 'scriptDns', 'scriptPath', 'scriptProtocol', 'scriptExtention',
@@ -65,34 +65,34 @@ function scriptInfos($p="info")
 
     switch (strtolower($p)) {
         case strtolower(substr($variables[0],6)):
-            echo 'scriptName   : '.$$variables[0];
+            echo $$variables[0];
             break;
         case strtolower(substr($variables[1],6)):
-            echo 'scriptDns    : '.$$variables[1];
+            echo $$variables[1];
             break;
         case strtolower(substr($variables[2],6)):
-            echo 'scriptPath   : '.$$variables[2];
+            echo $$variables[2];
             break;
         case strtolower(substr($variables[3],6)):
-            echo 'scriptProtocol   : '.$$variables[3];
+            echo $$variables[3];
             break;
         case strtolower(substr($variables[4],6)):
-            echo 'scriptExtention  : '.$$variables[4];
+            echo $$variables[4];
             break;
         case strtolower(substr($variables[5],6)):
-            echo 'scriptShortName  : '.$$variables[5];
+            echo $$variables[5];
             break;
         case strtolower(substr($variables[6],6)):
-        	echo 'scriptDirs    :<br>';
+        	
             foreach ($scriptDirs as $key => $value) {
                 echo "$key => $value<br />";
             };
             break;
         case strtolower(substr($variables[7],6)):
-            echo 'scriptLongPath   : '.$$variables[7];
+            echo $$variables[7];
             break;
         case strtolower(substr($variables[8],6)):
-            echo 'scriptFullPath   : '.$$variables[8];
+            echo  $$variables[8];
             break;
         //case strtolower(substr($variables[9],6)):
 	    default:
@@ -145,7 +145,14 @@ function creeTableau($liste, $titre='', $index = false)
     {
         foreach($liste as $key => $val)
         {
-            $tbOut .= "<tr><td style='".implode(';',$style)."'>$key</td><td>".$val['auteur']."</td><td>".$val['titre']."</td><td>".$val['prix']."</td></tr>";
+        	$tbOut .= "<tr><td style='".implode(';',$style)."'>$key</td>";
+        	
+	        $tab_value = array_keys($val);
+	        foreach ($tab_value as $elem)
+	        {
+		        $tbOut .="<td>".$val[$elem]."</td>";
+	        }
+	        $tbOut .="</tr>";
         }
 
     }
@@ -156,24 +163,35 @@ function creeTableau($liste, $titre='', $index = false)
 
 function monPrint_r(&$liste)
 {
-    $out = '<div>'."\n<hr>\n";
+    $out = '<div>'/*."\n<hr>\n"*/;
     $out .= "<pre>\n";
     if (is_array($liste)) $out .= print_r($liste,1);
     else $out .= '/[] : ' .$liste;
-    $out .= "</pre><hr></div>";
+    //$out .= "</pre><hr></div>";
     return $out;
 }
 
+function getServer()
+{
+	if ( $_SERVER["SERVER_NAME"] == '193.190.65.94')
+	{
+		return 'localhost';
+    }
+	return '193.190.65.94';
+}
 /*
 
 // $a = ['a'=>'bonjour','b'=>[1=>'le',0=>'monde']]; //pour tester
 echo "this is monPrint : <br> ".monPrint_r($tableau);
 //echo creeTableau($tableau, 'sans titre', 'none');
 //echo creeTableau($tableau, 'sans titre', false);
-echo creeTableau($tableau, 'sans index');
+//echo creeTableau($tableau, 'sans index');
+echo creeTableau($tableau);
 echo "<hr>";
 //echo creeTableau($tableau, 'avec titre', 'inline-block');
 echo creeTableau($tableau, 'avec index', true);
+echo " this is creeTableau";
+
 
 echo "<hr>";
 echo "<hr>";

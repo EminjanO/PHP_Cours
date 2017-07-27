@@ -36,12 +36,13 @@ $sql = "SELECT
 
 try
 {
-	$dbh = new PDO ("mysql:host = " . getServer() . ';dbName = ' . $dbName,
+	$dbh = new PDO ("mysql:host =etServer()" . /*$__INFOS__['host']*/getServer() . ';dbName = ' . $dbName,
 	                $__INFOS__['user'], $__INFOS__['pswd']);
 	
-	$query = $dbh->query($sql);
+	//$query = $dbh->query($sql);
 	
-	foreach ($query->fetchAll(PDO::FETCH_ASSOC) as $row)
+	foreach (/*$query->fetchAll(PDO::FETCH_ASSOC) *//*$dbh->query($sql)*/
+			$dbh->query($sql, PDO::FETCH_ASSOC) as $row)
 	{
 		echo monPrint_r($row);
 	}

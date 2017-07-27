@@ -31,7 +31,7 @@ function scriptInfos($p="info")
     if($count==0)
     {
         if(!defined('__SCRIPT_NAME__')) define('__SCRIPT_NAME__',$_SERVER["SCRIPT_NAME"]);
-        if(!defined('__SCRIPT_DNS__')) define('__SCRIPT_DNS__',$_SERVER["USERDOMAIN"]);
+	    if(!defined('__SCRIPT_DNS__')) define('__SCRIPT_DNS__',$_SERVER["SERVER_NAME"]); // avant c'était $_SERVER["USERDOMAIN"]
         if(!defined('__SCRIPT_PATH__')) define('__SCRIPT_PATH__',$_SERVER["PATH_TRANSLATED"]);
         if(!defined('__SCRIPT_PROTOCOL__')) define('__SCRIPT_PROTOCOL__',$_SERVER["SERVER_PROTOCOL"]);
 
