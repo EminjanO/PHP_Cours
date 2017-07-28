@@ -12,7 +12,6 @@ $groupe = (isset($_GET['groupe'])) ? ($_GET['groupe']) : '';
 			   value="<?php $groupe?>"/>
 		<input type="submit" value="Envoi"/>
 	</form>
-
 <?php
 
 if(!isset($_GET['groupe']) || $_GET['groupe'] == '') exit();
@@ -21,7 +20,6 @@ require_once('dbConnect.inc.php');
 require_once('mesFonctions.inc.php');
 
 $dbName = 'minicampus';
-
 
 try
 {
