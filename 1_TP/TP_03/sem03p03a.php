@@ -1,9 +1,3 @@
-<form method="get" action="">
-	<input type="text" name="groupe" placeholder="groupe recherché"
-		   value="<?php if (isset($_GET['groupe']) and $_GET['groupe'] != NULL) echo $_GET['groupe']; ?>"/>
-	<input type="submit" value="Envoi"/>
-</form>
-
 <?php
 /**
  * Created by PhpStorm.
@@ -11,18 +5,22 @@
  * Date: 2/24/17
  * Time: 2:34 PM
  */
+$groupe = (isset($_GET['groupe'])) ? ($_GET['groupe']) : '';
+?>
+<form method="get" action="">
+	<input type="text" name="groupe" placeholder="groupe recherché"
+		   value="<?php $groupe?>"/>
+	<input type="submit" value="Envoi"/>
+</form>
+
+<?php
+
+if(!isset($_GET['groupe']) || $_GET['groupe'] == '') exit();
+
 require_once('dbConnect.inc.php');
 require_once('mesFonctions.inc.php');
-/*
-$sourceDeDonnees = "mysql:host = 193.190.65.94; dbName = ".$dbName;
-$utilisateur = "OBULKASIM";
-$motPasseUtilisateur = "Eminjan62bW";
-*/
 
 $dbName = 'minicampus';
-
-//$groupe = '1TL2';
-$groupe = (isset($_GET['groupe'])) ? ($_GET['groupe']) : false;
 
 $sql = "SELECT
     		cours.code, faculte, cours.intitule
@@ -48,10 +46,11 @@ try
 	
 	//$query = $dbh->query($sql);
 	//$db = $dbh->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-	echo creeTableau($res, 'AVEC titre', 1);
+	if(!empty($res))
+	echo creeTableau($res, 'AVEC Index', 1);
 	$dbh = null;
 }
-catch (PDOException $e)
+catch (PDOExceparentNameption $e)
 {
 	print "Erreur !: " . $e->getMessage() . "<br>";
 	die();

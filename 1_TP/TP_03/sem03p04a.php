@@ -63,13 +63,15 @@ if(isset($_GET['groupe']))
                 $sth = $dbh->prepare($sql);
                 $sth->execute(array($groupe));
                 $res = $sth->fetchAll(PDO::FETCH_ASSOC);
-
-                echo 'Groupe : '.$groupe.'<br>';
-                echo 'Nom du parent : '. $infos['parentName']."<br>";
-                //$query = $dbh->query($sql);
-                //$db = $dbh->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-                if($res) echo creeTableau($res,'AVEC titre',1);
-                else echo 'Aucun cours n\'est rattaché à ce groupe !';
+                
+                if(!empty($res))
+				{
+					echo 'Groupe : '.$groupe.'<br>';
+					echo 'Nom du parent : '. $infos['parentName']."<br>";
+					echo creeTableau($res,'AVEC Index',1);
+				}
+                
+                //else echo 'Aucun cours n\'est rattaché à ce groupe !';
         }
         else
         {

@@ -42,7 +42,7 @@ try
 	
 	//$query = $dbh->query($sql);
 	//$db = $dbh->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-	echo creeTableau($res, 'AVEC titre', 1);
+	echo creeTableau($res, 'AVEC index', 1);
 	$dbh = null;
 }
 catch (PDOException $e)
