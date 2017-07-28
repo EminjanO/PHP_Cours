@@ -9,7 +9,7 @@ $groupe = (isset($_GET['groupe'])) ? ($_GET['groupe']) : '';
 ?>
 	<form method="get" action="">
 		<input type="text" name="groupe" placeholder="groupe recherché"
-			   value="<?php $groupe?>"/>
+			   value=""/>
 		<input type="submit" value="Envoi"/>
 	</form>
 <?php
@@ -31,17 +31,19 @@ try
 	$sthTestP->execute(array($groupe));
 	
 	$infos = $sthTestP->fetch(PDO::FETCH_ASSOC);
+	
 	if(!empty($infos))
 	{
 		$sql = "call 1617he201365.mc_coursesGroup(?)";
 		
 		$sth = $dbh->prepare($sql);
+		debug($dbh->prepare($sql));
 		$sth->execute(array($groupe));
 		$res = $sth->fetchAll(PDO::FETCH_ASSOC);
-		
+		//echo monPrint_r($res);
 		echo 'Groupe : '.$groupe.'<br>';
 		echo 'Nom du parent : '. $infos['parentName']."<br>";
-		echo monPrint_r($res);
+		
 		if(!empty($res)) echo creeTableau($res,'AVEC Index',1);
 		else echo 'Aucun cours n\'est rattaché à ce groupe !';
 	}

@@ -9,7 +9,7 @@ $groupe = (isset($_GET['groupe'])) ? ($_GET['groupe']) : '';
 ?>
 	<form method="get" action="">
 		<input type="text" name="groupe" placeholder="groupe recherché"
-			   value="<?php $groupe?>"/>
+			   value=""/>
 		<input type="submit" value="Envoi"/>
 	</form>
 <?php
