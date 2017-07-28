@@ -34,7 +34,6 @@ $sql = "SELECT
     		class.nom = ?/*'$groupe'*/ 
 		order by cours.code";
 
-
 try
 {
 	$dbh = new PDO ("mysql:host = " . getServer() . ';dbName = ' . $dbName,
