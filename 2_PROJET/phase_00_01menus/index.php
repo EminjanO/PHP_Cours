@@ -1,6 +1,6 @@
 <?php
-global $__INFOS__;
 include 'INC/dbConnect.inc.php';
+global $__INFOS__;
 $auteur= $__INFOS__['nom'].$__INFOS__['prenom'];
 $mailAdd=$__INFOS__['matricule'].'@students.ephec.be';
 $title='Accueil';

@@ -1,10 +1,13 @@
 /**
  * Created by eminjan on 2/19/17.
  */
-
+function main(){
+	affiche("credit", false);
+	document.querySelector('a').focus();
+}
 function affiche(id, b)  // afficher et cacher le crédit
 {
-    document.getElementById(id).style.display = b ? '' : 'none';
+    document.getElementById(id).style.display = b ? "block" : "none";
 }
 
 function ajaxHTML(a)

@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>
-            Gabarit 04: minimaliste, menu vertical à gauche, largeur fluide
+	        <?php echo $title; ?>
         </title>
         <!-- La feuille de styles "base.css" doit être appelée en premier. -->
         <link rel="stylesheet" type="text/css" href="CSS/base.css" media="all" />
