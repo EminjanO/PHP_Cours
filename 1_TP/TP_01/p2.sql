@@ -1,4 +1,4 @@
-/* combien d'étudiants? */
+/* combien combiencombiencombiend'étudiants? */
 SELECT
     COUNT(*) AS nbr
 FROM
