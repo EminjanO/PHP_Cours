@@ -5,30 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc12de71-ba92-4d35-ac55-5f45c94fdf8e" name="Default" comment="first test in my phpstorm &amp;&amp; tested sql file">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/IMG/04.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phase00_01_fichiers.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phase00_01_fichiers/04.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/CSS/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/CSS/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/CSS/modele04.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/appelHTML.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/appelJSON.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/dbConnect.inc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/layout.html.inc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/mesFonctions.inc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/JS/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/web.config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2_PROJET/phase_00_01menus/CSS/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2_PROJET/phase_00_01menus/CSS/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2_PROJET/phase_00_01menus/CSS/modele04.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phase00_01_fichiers/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phase00_01_fichiers/modele04.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phase00_01_fichiers/modele04.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_01menus/JS/index.js" afterPath="$PROJECT_DIR$/2_PROJET/phase_00_01menus/JS/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2_PROJET/phase_00b/INC/appelJSON.php" afterPath="$PROJECT_DIR$/2_PROJET/phase_00b/INC/appelJSON.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/appelJSON.php" afterPath="$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/appelJSON.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/appelHTML.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+              <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="false" />
                 <marker date="1502025527130" expanded="true" signature="627:801" ph="..." />
@@ -67,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -76,8 +53,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/JS/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+            <state relative-caret-position="1065">
+              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -86,8 +63,8 @@
       <file leaf-file-name="layout.html.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/layout.html.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="36" column="64" lean-forward="true" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
+            <state relative-caret-position="540">
+              <caret line="36" column="64" lean-forward="false" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -96,11 +73,11 @@
       <file leaf-file-name="appelJSON.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/appelJSON.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+            <state relative-caret-position="421">
+              <caret line="132" column="14" lean-forward="true" selection-start-line="132" selection-start-column="14" selection-end-line="132" selection-end-column="14" />
               <folding>
-                <element signature="e#1514#3914#1#PHP" expanded="false" />
-                <element signature="e#4305#7788#0#PHP" expanded="false" />
+                <element signature="e#1537#3937#1#PHP" expanded="false" />
+                <element signature="e#4328#7811#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -109,7 +86,7 @@
       <file leaf-file-name="mesFonctions.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/mesFonctions.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
+            <state relative-caret-position="2520">
               <caret line="173" column="20" lean-forward="true" selection-start-line="173" selection-start-column="9" selection-end-line="173" selection-end-column="20" />
               <folding>
                 <marker date="1502051666622" expanded="true" signature="6628:6634" ph=" " />
@@ -322,14 +299,15 @@
       <workItem from="1501624151675" duration="2478000" />
       <workItem from="1501670611197" duration="1828000" />
       <workItem from="1502024428353" duration="25865000" />
+      <workItem from="1502058653456" duration="29000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98552000" />
+    <option name="totallyTimeSpent" value="98581000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="26" width="1600" height="873" extended-state="6" />
+    <frame x="0" y="33" width="1600" height="873" extended-state="6" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36375" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.060625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -585,7 +563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -600,9 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1494017246434" expanded="true" signature="665:839" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -610,7 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -618,7 +591,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -626,7 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="36" column="72" lean-forward="false" selection-start-line="36" selection-start-column="72" selection-end-line="36" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -634,7 +605,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="26" column="25" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -642,10 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="n#listeCours#0;n#!!top" expanded="false" />
-            <element signature="e#1034#3502#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -653,9 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="32" column="1" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="32" selection-end-column="1" />
-          <folding>
-            <marker date="1494017250919" expanded="true" signature="665:839" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -663,7 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -671,9 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-          <folding>
-            <element signature="e#1058#3474#1#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -681,7 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="533">
           <caret line="234" column="10" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="237" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -689,13 +647,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/mesFonctions.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
+        <state relative-caret-position="2520">
           <caret line="173" column="20" lean-forward="true" selection-start-line="173" selection-start-column="9" selection-end-line="173" selection-end-column="20" />
           <folding>
             <marker date="1502051666622" expanded="true" signature="6628:6634" ph=" " />
@@ -710,22 +667,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
           <caret line="46" column="13" lean-forward="false" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/layout.html.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="36" column="64" lean-forward="true" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
+        <state relative-caret-position="540">
+          <caret line="36" column="64" lean-forward="false" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/JS/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state relative-caret-position="1065">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -733,7 +689,7 @@
     <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/appelHTML.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="false" />
             <marker date="1502025527130" expanded="true" signature="627:801" ph="..." />
@@ -744,18 +700,18 @@
     <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/appelJSON.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+        <state relative-caret-position="421">
+          <caret line="132" column="14" lean-forward="true" selection-start-line="132" selection-start-column="14" selection-end-line="132" selection-end-column="14" />
           <folding>
-            <element signature="e#1514#3914#1#PHP" expanded="false" />
-            <element signature="e#4305#7788#0#PHP" expanded="false" />
+            <element signature="e#1537#3937#1#PHP" expanded="false" />
+            <element signature="e#4328#7811#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

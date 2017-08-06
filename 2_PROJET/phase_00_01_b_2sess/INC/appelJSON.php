@@ -55,7 +55,7 @@ function listeCours($getGroup)
 	catch (PDOException $e)
 	{
 		
-		return [["PDOException ! " => $e->getMessage()]];
+		return [["PDOException ! " => $e->getMessage()]]; // problème est là !!!
 	}
 }
 
