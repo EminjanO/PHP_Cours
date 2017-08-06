@@ -24,15 +24,11 @@ function listeCours($getGroup)
 		$dbh = new PDO ("mysql:host = " . getServer() . ';dbName = ' . $dbName,
 		                $__INFOS__['user'], $__INFOS__['pswd']);
 		
-		
-		if (isset($getGroup) || empty($getGroup))
+		if (isset($getGroup) || !empty($getGroup))
 		{
 			$sql = "call 1617he201365.mc_coursesGroup(?)";
-			
 			$sth = $dbh->prepare($sql);
-			
 			$sth->execute(array($getGroup));
-			
 			$res = $sth->fetchAll(PDO::FETCH_ASSOC);
 			
 			if ($res) return $res;
