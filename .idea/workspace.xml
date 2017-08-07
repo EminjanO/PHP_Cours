@@ -5,7 +5,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc12de71-ba92-4d35-ac55-5f45c94fdf8e" name="Default" comment="first test in my phpstorm &amp;&amp; tested sql file">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/appelJSON.php" afterPath="$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/appelJSON.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b/CSS/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b/CSS/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b/CSS/modele04.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b/IMG/04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b/INC/appelHTML.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b/INC/appelJSON.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b/INC/dbConnect.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b/INC/layout.html.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b/INC/mesFonctions.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b/INC/sem03p99.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b/JS/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b/mesFonctions.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b/web.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b0/CSS/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b0/CSS/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b0/CSS/modele04.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b0/IMG/04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b0/INC/appelHTML.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b0/INC/appelJSON.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b0/INC/dbConnect.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b0/INC/layout.html.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b0/JS/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b0/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b0/web.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b00/CSS/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b00/CSS/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b00/CSS/modele04.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b00/IMG/04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b00/INC/appelHTML.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b00/INC/appelJSON.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b00/INC/dbConnect.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b00/INC/layout.html.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b00/INC/mesFonctions.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b00/INC/sem03p99.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b00/JS/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b00/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b00/mesFonctions.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_b00/web.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00_menus/CSS/modele04.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00b/CSS/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00b/CSS/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00b/CSS/modele04.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00b/IMG/04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00b/INC/appelHTML.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00b/INC/appelJSON.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00b/INC/dbConnect.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00b/INC/layout.html.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00b/INC/mesFonctions.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00b/INC/sem03p99.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00b/JS/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00b/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00b/mesFonctions.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2_PROJET/phase_00b/web.config" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,79 +80,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="appelHTML.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/appelHTML.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-              <folding>
-                <element signature="e#6#87#0#PHP" expanded="false" />
-                <marker date="1502025527130" expanded="true" signature="627:801" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/JS/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1065">
-              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html.inc.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/layout.html.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="64" lean-forward="false" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="appelJSON.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/appelJSON.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="132" column="14" lean-forward="true" selection-start-line="132" selection-start-column="14" selection-end-line="132" selection-end-column="14" />
-              <folding>
-                <element signature="e#1537#3937#1#PHP" expanded="false" />
-                <element signature="e#4328#7811#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mesFonctions.inc.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/mesFonctions.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2520">
-              <caret line="173" column="20" lean-forward="true" selection-start-line="173" selection-start-column="9" selection-end-line="173" selection-end-column="20" />
-              <folding>
-                <marker date="1502051666622" expanded="true" signature="6628:6634" ph=" " />
-                <marker date="1502051666622" expanded="true" signature="6640:6805" ph="..." />
-                <marker date="1502051666622" expanded="true" signature="6721:6801" ph="..." />
-                <marker date="1502051666622" expanded="true" signature="6827:6840" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -164,9 +146,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="33" />
-    <option name="width" value="925" />
-    <option name="height" value="867" />
+    <option name="x" value="58" />
+    <option name="y" value="27" />
+    <option name="width" value="915" />
+    <option name="height" value="864" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -206,7 +189,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,31 +200,13 @@
             <path>
               <item name="HE201365" type="b2602c69:ProjectViewProjectNode" />
               <item name="HE201365" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="1_TP" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="HE201365" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HE201365" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="2_PROJET" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="HE201365" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HE201365" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="2_PROJET" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phase_00_01_b_2sess" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="HE201365" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HE201365" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="2_PROJET" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phase_00_01_b_2sess" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="INC" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,17 +265,18 @@
       <workItem from="1501670611197" duration="1828000" />
       <workItem from="1502024428353" duration="25865000" />
       <workItem from="1502058653456" duration="29000" />
+      <workItem from="1502103903632" duration="710000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98581000" />
+    <option name="totallyTimeSpent" value="99291000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="33" width="1600" height="873" extended-state="6" />
+    <frame x="0" y="26" width="1600" height="873" extended-state="6" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36375" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.060625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16625" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1575" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.050583657" sideWeight="0.5025" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -650,19 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/mesFonctions.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="173" column="20" lean-forward="true" selection-start-line="173" selection-start-column="9" selection-end-line="173" selection-end-column="20" />
-          <folding>
-            <marker date="1502051666622" expanded="true" signature="6628:6634" ph=" " />
-            <marker date="1502051666622" expanded="true" signature="6640:6805" ph="..." />
-            <marker date="1502051666622" expanded="true" signature="6721:6801" ph="..." />
-            <marker date="1502051666622" expanded="true" signature="6827:6840" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/1_TP/TP_03/sem03p99.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
@@ -707,11 +660,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/appelJSON.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="132" column="14" lean-forward="true" selection-start-line="132" selection-start-column="14" selection-end-line="132" selection-end-column="14" />
+        <state relative-caret-position="782">
+          <caret line="215" column="27" lean-forward="true" selection-start-line="215" selection-start-column="27" selection-end-line="215" selection-end-column="27" />
           <folding>
             <element signature="e#1537#3937#1#PHP" expanded="false" />
             <element signature="e#4328#7811#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2_PROJET/phase_00_01_b_2sess/INC/mesFonctions.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="842">
+          <caret line="173" column="20" lean-forward="false" selection-start-line="173" selection-start-column="9" selection-end-line="173" selection-end-column="20" />
+          <folding>
+            <marker date="1502051666622" expanded="true" signature="6628:6634" ph=" " />
+            <marker date="1502051666622" expanded="true" signature="6640:6805" ph="..." />
+            <marker date="1502051666622" expanded="true" signature="6721:6801" ph="..." />
+            <marker date="1502051666622" expanded="true" signature="6827:6840" ph="..." />
           </folding>
         </state>
       </provider>
