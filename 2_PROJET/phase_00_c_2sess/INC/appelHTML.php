@@ -54,10 +54,15 @@ switch ($_GET['rq'])
                     <fieldset id="fieldsetA">
 	                    <legend>Groupe recherché</legend>
 		                    <div class="form">
-		                        <input name=groupe type="text" placeholder="nom du groupe recherché" oninput="filtre_v2(this);"><br>
-		                        <label title="début" for="debut"><<<input id=debut type=radio name="posFiltre" value="debut" onchange="filtre_v2(this);"><label title="milieu" for="milieu">>
-		                        <input id=milieu type=radio name="posFiltre" value="milieu" checked onchange="filtre_v2(this);"><label title="milieu" for="milieu"><
-		                        <input id=fin type=radio name="posFiltre" value="fin" onchange="filtre_v2(this);"><label title="fin" for="fin">>>
+		                        <input name=groupe type="text" placeholder="nom du groupe recherché" oninput="old_filtre_v2(this);"><br>
+		                        <label title="début" for="debut"><<<input id=debut type=radio name="posFiltre" value="B" onclick="old_filtre_v2(this);">
+		                        
+		                        <label title="milieu" for="milieu">>
+		                        <input id=milieu type=radio name="posFiltre" value="I" checked onclick="old_filtre_v2(this);">
+		                        <label title="milieu" for="milieu"><
+		                        
+		                        <input id=fin type=radio name="posFiltre" value="E" onclick="old_filtre_v2(this);">
+		                        <label title="fin" for="fin">>>
 		                    </div>
                 	</fieldset>
                 	<fieldset id="fieldsetB">

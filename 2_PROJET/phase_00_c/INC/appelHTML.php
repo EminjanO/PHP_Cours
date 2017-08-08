@@ -44,9 +44,10 @@ switch ($_GET['rq'])
                  </form>';
         break;
     case 'tpSem04':
-        echo    '<fieldset id="a">
+        echo    '<form name="searchFormul" onsubmit="return false">
+				<fieldset id="a">
                     <legend>Groupe recherché</legend>
-                    <form name="searchFormul" onsubmit="return false">
+                    
                         <input type="text" name="zoneSearch" title="nom de la groupe" placeholder="nom du groupe recherché" 
                         	oninput="filtre_v2(this)" id="zSearch" value=""/> <br>
                         <label for="begin"><<</label>
@@ -61,30 +62,31 @@ switch ($_GET['rq'])
                         <input onchange="filtre_v2(this.form.zSearch)" type="radio" name="part" title="fin(after)" 
                         	id="DERRIERE" value="E"> 
                         <label for="after">>></label>
-                     </form>
+                     
                  </fieldset>
                  
                  <fieldset id="b">
                      <legend id="bLegend">Suggestion</legend>
                      <span id="pDSuggestion">pas de suggestion</span>
-                     <form name="select" title="choisissez le groupe à afficher" id="selec" onsubmit="return false">
+                     
                         <span id="blocOption">
                             <select id="sem04Select" onchange="monChoix(this)" data-url="listeCours.html" data-dest="affiche" 
                         	    size="10">
                                 <option></option>
                         </select>
                     </span>
-                     </form>
-                 </fieldset>
+                     
+                                      </fieldset>
                  
                  <fieldset id="c">
                     
                     <legend>Liste des cours</legend>
-                    <form name="affiche" title="affichage de contenue" id="affiche" onsubmit="return false"> 
+                     
                          <p id="identifiandPhp">Pas de groupe séléctionné</p>
                          <div id="tble"></div>
-                    </form>
-                 </fieldset>                                  
+                    
+                 </fieldset>
+                 </form>
                  <div id="visu"></div>
                  
                  <script id="monScript" title="listeGroupes">';

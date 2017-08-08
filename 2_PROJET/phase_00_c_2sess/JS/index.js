@@ -1,6 +1,5 @@
 /**
- * Created by eminjan on 2/19/17.
- */
+ * Created by eminjan on 2/19/17. */
 var data = new Object();
 
 function main(){
@@ -33,10 +32,9 @@ function ajaxHTML(a)
 			{
 				data[script.title]=JSON.parse(script.text); /* récupérer la valeur de son title 'x' et le contenu textuel
                                                                 de 'monScript' 'y' et aficher la variable var data['x']
-                                                                avec le décodge JSON de 'y'
-                                                             */
+                                                                avec le décodge JSON de 'y'*/
 				var parent = script.parentNode;
-				parent.removeChild(parent.childNodes[(parent.childNodes.length-1)]); // supprimer la balise <script> et son contenu
+				parent.removeChild(parent.childNodes[parent.childNodes.length-1]); // supprimer la balise <script> et son contenu
 			}
         }
     }
@@ -106,4 +104,41 @@ function createTableOrderByTitle(json){
         +'</td></tr></tbody></table>';
     return html;
 }
-
+/*
+function filtre (el)
+{
+	var elMaj = el.value.toUpperCase();
+	var liste = data['listeGroup'].filter(function (x)
+										{
+											//return x.nom.indexOf(elMaj) > -1;
+											switch (el.form.posFiltre.value)
+											{
+												case 'I' : return x.nom.indexOf(elMaj) > -1;
+												case 'B' : return x.nom.indexOf(elMaj) == 0;
+												case 'E' : var p = x.nom.lastIndexOf(elMaj);
+													return (p != -1) && ( p == x.nom.length - elMaj.length );
+											}
+										}).map(function (x) { return x.nom }).join(', ');
+	if(elMaj!= '')setElem('visu', liste);
+	else setElem('visu','');
+	//setElem('visu', el.value);
+}
+*/
+var filters =
+		{
+			I : function(x,y){ return x.nom.indexOf(y) > -1},
+			B : function(x,y){ return x.nom.indexOf(y) == 0},
+			E : function(x,y){ return ( p = x.nom.lastIndexOf(y)) != -1 && p == x.nom.length - y.length }
+		};
+function old_filtre_v2(el) // original filtrage!!!!!!!!!
+{
+	var elMaj= el.value.toUpperCase();
+	var liste = '';
+	value = el.form.posFiltre.value;
+	liste = data['listeGroup'].filter(function (x)
+								{
+									return filters[value](x,elMaj)
+								}).map(function(x) { return x.nom}).join(', ');
+	if(elMaj!= '')setElem('visu', liste);
+	else setElem('visu','');
+}

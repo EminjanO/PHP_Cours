@@ -11,6 +11,7 @@
         <link rel="stylesheet" type="text/css" href="CSS/modele04.css" />
         <link rel="stylesheet" type="text/css" href="CSS/index.css" />
         <script type="text/javascript" src="JS/index.js"></script>
+		<script type="text/javascript" src="JS/utils.js"></script>
     </head>
 
 	<body onload="main()">

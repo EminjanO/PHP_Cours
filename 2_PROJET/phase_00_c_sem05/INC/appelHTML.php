@@ -50,15 +50,15 @@ switch ($_GET['rq'])
                         <input type="text" name="zoneSearch" title="nom de la groupe" placeholder="nom du groupe recherché" 
                         	oninput="filtre_v2(this)" id="zSearch" value=""/> <br>
                         <label for="begin"><<</label>
-                        <input onchange="filtre_v2(this.form.zSearch)" type="radio" name="part" title="début(Begin)" 
+                        <input onchange="filtre_v2(this.form.zSearch)" type="radio" name="part" title="début(Begin)"
                         	id="DEVANT" value="B"> 
                         	
                         >
-                        <input onchange="filtre_v2(this.form.zSearch)" type="radio" name="part" title="au milieu(middle)" 
+                        <input onchange="filtre_v2(this.form.zSearch)" type="radio" name="part" title="au milieu(middle)"
                         	id="DANS" value="I" checked>
                         <
                         
-                        <input onchange="filtre_v2(this.form.zSearch)" type="radio" name="part" title="fin(after)" 
+                        <input onchange="filtre_v2(this.form.zSearch)" type="radio" name="part" title="fin(after)"
                         	id="DERRIERE" value="E"> 
                         <label for="after">>></label>
                      </form>
