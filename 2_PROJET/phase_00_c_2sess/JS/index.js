@@ -134,11 +134,46 @@ function old_filtre_v2(el) // original filtrage!!!!!!!!!
 {
 	var elMaj= el.value.toUpperCase();
 	var liste = '';
-	value = el.form.posFiltre.value;
+	var value = el.form.posFiltre.value;
 	liste = data['listeGroup'].filter(function (x)
 								{
 									return filters[value](x,elMaj)
-								}).map(function(x) { return x.nom}).join(', ');
-	if(elMaj!= '')setElem('visu', liste);
-	else setElem('visu','');
+								}).map(function(x) { return x.nom});//.join(', ');
+	var listeOptions = liste.map(function (x)
+	{
+		return '<option value ='+x+'>'+x+'</option>'
+	});
+	console.log(listeOptions);
+//	if(elMaj!= '')
+//	{
+//		//setElem('visu', liste.join(', '));
+//		setElem('sem04Select',listeOptions);
+//	}
+	//else setElem('visu','');
+//	setElem('sem04Select',listeOptions);
+
+	if(liste.length != 0)
+	{
+		if(liste.length < 10)
+		{
+			refElem('sem04Select').size = liste.length;
+			refElem('sem04Select').style.overflowY="hidden";
+			refElem('sem04Select').style.overflowX="hidden";
+		}
+		else
+		{
+			refElem('sem04Select').size = 10;
+			refElem('sem04Select').style.overflowY="scroll";
+			//refElem('sem04Select').style.overflowX="scroll";
+		}
+		refElem('msg').style.display = "none";
+		refElem('sem04Select').style.display = 'block';
+
+		setElem('sem04Select', listeOptions.join('\n'));
+	}
+	else
+	{
+		refElem('msg').style.display = "block";
+		refElem('sem04Select').style.display = 'none';
+	}
 }

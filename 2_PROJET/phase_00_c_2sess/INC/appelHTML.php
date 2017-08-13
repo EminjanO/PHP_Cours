@@ -68,7 +68,8 @@ switch ($_GET['rq'])
                 	<fieldset id="fieldsetB">
                     	<legend>Suggestion <span id="nb"></span></legend>
                     	<div id=selectBlock class="form">
-                        	<select id=selectGroup name="select" form="tpSem04" size=0 title="choisissez le groupe à afficher" data-url="listeCours.html" data-dest="listeCoursTable" data-groupe="">
+                        	<select id="sem04Select" name="select" form="tpSem04" size=0 title="choisissez le groupe à afficher"
+                        	data-url="listeCours.html" data-dest="listeCoursTable" data-groupe="" >
                         	</select>
                     	</div>
                     	<div id="msg">
@@ -88,7 +89,7 @@ switch ($_GET['rq'])
                 </form>
                 <div id="visu">
                 </div>
-                 <script id=monScript title=listeGroup>'. $jsonTab.'</script>';
+                 <script id=monScript title=listeGroup>' . $jsonTab.'</script>';
 		break;
 	case 'credits':
 		echo "<hr>Requête : credits<hr>Les liens \"crédits\" sont cachés sous le mot correspondant dans le pied de page<hr>";

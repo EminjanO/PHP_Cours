@@ -155,7 +155,7 @@ function old_filtre_v2(el) // original filtrage!!!!!!!!!
 {
     var elMaj= el.value.toUpperCase();
     var liste = '';
-    value = el.form.part.value;
+    var value = el.form.part.value;
     liste = data['listeGroupes']
         .filter(function (x)
         {
@@ -185,7 +185,7 @@ function filtre_v2(el)
 {
     var elMaj= el.value.toUpperCase();
     var liste = '';
-    value = el.form.part.value;
+    var value = el.form.part.value;
     liste = data['listeGroupes']
         .filter(function (x)
         {
