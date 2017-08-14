@@ -130,7 +130,6 @@ switch ($_GET['rq'])
         $destination = isset($_GET['dest'])?$_GET['dest']:'contenu';
         $tableau = listeCours($_GET['groupe']);
         $toSend = ['creeTableau'=>['destination' => $destination, 'tableau' => $tableau]];
-
         break;
 
     default :
@@ -143,4 +142,4 @@ switch ($_GET['rq'])
         ]);
     // default : echo require_once('sem03p99.php');//echo json_encode('[]');
 }
-echo json_encode($tableau);
+echo json_encode($toSend);

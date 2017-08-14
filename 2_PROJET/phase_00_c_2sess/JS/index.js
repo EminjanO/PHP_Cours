@@ -130,6 +130,46 @@ var filters =
 			B : function(x,y){ return x.nom.indexOf(y) == 0},
 			E : function(x,y){ return ( p = x.nom.lastIndexOf(y)) != -1 && p == x.nom.length - y.length }
 		};
+function filtre_v2(el)
+{
+	var elMaj= el.value.toUpperCase();
+	var liste = '';
+	var value = el.form.posFiltre.value;
+	liste = data['listeGroup']
+		.filter(function (x)
+		{
+			return filters[value](x,elMaj)
+		})
+		.map(function(x){ return x});
+	var listeOptions = liste
+		.map(function (x) { return '<option value =' + x.id + '>' + x.nom + '</option>'});
+
+	if(liste.length != 0)
+	{
+		if(liste.length < 10)
+		{
+			refElem('sem04Select').size = liste.length;
+			refElem('sem04Select').style.overflowY="hidden";
+			refElem('sem04Select').style.overflowX="hidden";
+		}
+		else
+		{
+			refElem('sem04Select').size = 10;
+			refElem('sem04Select').style.overflowY="scroll";
+			//refElem('sem04Select').style.overflowX="scroll";
+		}
+		refElem('msg').style.display = "none";
+		refElem('sem04Select').style.display = 'block';
+
+		setElem('sem04Select', listeOptions.join('\n'));
+	}
+	else
+	{
+		refElem('msg').style.display = "block";
+		refElem('sem04Select').style.display = 'none';
+	}
+}
+
 function old_filtre_v2(el) // original filtrage!!!!!!!!!
 {
 	var elMaj= el.value.toUpperCase();
@@ -176,4 +216,87 @@ function old_filtre_v2(el) // original filtrage!!!!!!!!!
 		refElem('msg').style.display = "block";
 		refElem('sem04Select').style.display = 'none';
 	}
+}
+
+function monChoix(el)
+{
+	// 1.1
+	//alert("je suis dans monChoix() \n");
+	/*
+	//c'est pour l'affichage la liste de cours préparation 1.2
+	var sel=refElem('sem04Select');
+	var opt=sel.options[sel.selectedIndex];
+	alert("je suis dans monChoix() \n" + opt.text );
+	*/
+	/*
+	// 3
+	 alert("je suis dans monChoix() \n"
+
+		+ 'data:{"url":"' + el.dataset.url + '","dest":"' + el.dataset.dest + '","groupe":"' + el.dataset.groupe+'"}' )
+	*/
+	el.dataset.groupe=el.value; // ajouter la valeur de l'<<option choisie>> dans une variable supplémentaire du dataset
+								// équivalente à <<data-groupe>>
+	newAjaxJSON(el);
+}
+
+function gereRetour(json)
+{
+
+	var retour = JSON.parse(json);
+	var action = Object.keys(retour);
+	switch (action[0])
+	{
+	case 'creeTableau':
+		var data = retour.creeTableau;
+		refElem(data.destination).innerHTML = createTableOrderByTitle(JSON.stringify(data.tableau));
+		break;
+	case 'contenu':
+		refElem('contenu').innerHTML = retour['contenu'];
+		break;
+	case 'changeLogo':
+		console.log(retour);
+		refElem("logo").src = retour.changeLogo + '?' + (new Date()).getTime();
+		break;
+	}
+
+	//refElem("aff04ListeCours").innerHTML = createTableOrderByTitle(json);
+}
+
+function newAjaxJSON(a)
+{
+	/*
+	if(a.action) a.dataset.url = a.attributes.action.value; //existance de l'attribut action, auquel cas on récupère
+															// sa valeur pour la mettre dans le dataset-url
+	if(a.href) a.dataset.url = a.attributes.href.value;   // si on vien d'un lien
+	*/
+	var lien = a.dataset.url;                        //On recupère l'url de la fausse page
+	var nom = lien.split('.')[0];                   //On ne retient que son nom; pas besoin de value cette fois
+	var inputs = Object.assign({},a.dataset);  //On crée dans un objet vide une copie du dataset
+	delete inputs.url;                                 //On supprime la propriété url inutile à présent
+
+
+	inputs = Object.keys(inputs)            // On prend les clés (noms des champs)
+				   .map(function(x)                    // On itère pour chaune de ces clés --> Array
+				   {
+					   return x + '=' + inputs[x]      // On y joint les valeurs
+				   })                                      /////butunqisi bu// inputs = groupe=1TL2 genre chose
+				   .join('&');                         // On kie tous les morceaux avec le bon caractère
+
+
+	var xhttp= new XMLHttpRequest();
+
+	xhttp.onreadystatechange = function ()
+	{
+		if(this.status == 200 && this.readyState == 4)
+		{
+			gereRetour(this.responseText);
+		}
+	};
+	//if(inputs)
+//	xhttp.open("POST","INC/newAppelJSON.php?rq=" + nom +"&"+ inputs, true);
+	xhttp.open("GET","INC/newAppelJSON.php?rq=" + nom +"&"+ inputs, true);
+//	if(a.action)    xhttp.send(new FormData(a));
+//	else    xhttp.send(new FormData() );
+	xhttp.send();
+	return false;
 }

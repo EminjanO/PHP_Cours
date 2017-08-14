@@ -54,22 +54,22 @@ switch ($_GET['rq'])
                     <fieldset id="fieldsetA">
 	                    <legend>Groupe recherché</legend>
 		                    <div class="form">
-		                        <input name=groupe type="text" placeholder="nom du groupe recherché" oninput="old_filtre_v2(this);"><br>
-		                        <label title="début" for="debut"><<<input id=debut type=radio name="posFiltre" value="B" onclick="old_filtre_v2(this);">
+		                        <input name=groupe type="text" placeholder="nom du groupe recherché" oninput="filtre_v2(this);"><br>
+		                        <label title="début" for="debut"><<<input id=debut type=radio name="posFiltre" value="B" onclick="filtre_v2(this);">
 		                        
 		                        <label title="milieu" for="milieu">>
-		                        <input id=milieu type=radio name="posFiltre" value="I" checked onclick="old_filtre_v2(this);">
+		                        <input id=milieu type=radio name="posFiltre" value="I" checked onclick="filtre_v2(this);">
 		                        <label title="milieu" for="milieu"><
 		                        
-		                        <input id=fin type=radio name="posFiltre" value="E" onclick="old_filtre_v2(this);">
+		                        <input id=fin type=radio name="posFiltre" value="E" onclick="filtre_v2(this);">
 		                        <label title="fin" for="fin">>>
 		                    </div>
                 	</fieldset>
                 	<fieldset id="fieldsetB">
                     	<legend>Suggestion <span id="nb"></span></legend>
                     	<div id=selectBlock class="form">
-                        	<select id="sem04Select" name="select" form="tpSem04" size=0 title="choisissez le groupe à afficher"
-                        	data-url="listeCours.html" data-dest="listeCoursTable" data-groupe="" >
+                        	<select id="sem04Select" onchange="monChoix(this)" name="select" form="tpSem04" size=0 title="choisissez le groupe à afficher"
+                        	data-url="listeCours.html" data-dest="aff04ListeCours">
                         	</select>
                     	</div>
                     	<div id="msg">
@@ -82,7 +82,7 @@ switch ($_GET['rq'])
                         	<p id="listeCoursMsg">
                             	Pas de groupe sélectionné
                         	</p>
-	                        <div id="listeCoursTable">
+	                        <div id="aff04ListeCours">
 	                        </div>
                     	</div>
                 	</fieldset>
