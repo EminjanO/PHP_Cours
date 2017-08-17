@@ -91,11 +91,11 @@ function sendMail()
             ,'<legend>Message provenant de "contact"</legend>'
             ,'<table style="border: 1px solid black; border-collapse: collapse">'
             ,'<tr class="msgFrom"><td style="border: 1px solid black;font-weight: bold; padding: 1.5em;">mail</td>
-                                                    <td style="border: 1px solid black; padding: 0.5em;">'.$msg['fc_email'].'</td></tr>'
+                                  <td style="border: 1px solid black; padding: 0.5em;">'.$msg['fc_email'].'</td></tr>'
             ,'<tr class="megSubject"><td style="border: 1px solid black;font-weight: bold; padding: 1.5em;">sujet</td>
-                                                    <td style="border: 1px solid black; padding: 0.5em;">'.$msg['fc_sujet'].'</td></tr>'
+                                     <td style="border: 1px solid black; padding: 0.5em;">'.$msg['fc_sujet'].'</td></tr>'
             ,'<tr class="msgMsg"><td style="border: 1px solid black;font-weight: bold; padding: 1.5em;">message</td>
-                                                    <td style="border: 1px solid black; padding: 0.5em;">'.$msg['fc_message'].'</td></tr>'
+                               	 <td style="border: 1px solid black; padding: 0.5em;">'.$msg['fc_message'].'</td></tr>'
             ,'</table>'
             ,'</fieldset>'
         ],
