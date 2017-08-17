@@ -7,6 +7,9 @@
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
+          <excludedPaths>
+            <excludedPath path="/1_TP/TP_05/DOCUMENTS/MATIERE OS.docx" />
+          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>

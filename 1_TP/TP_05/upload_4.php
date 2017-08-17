@@ -17,11 +17,14 @@
             $dossier = 'AVATARS/';
 	        $avatarMaxSize= 150; //(px)
             $fichier = basename($_FILES['fichierUpload']['name']); // y a un bug ici, si il ya une space dans le non de fichier !!!!!!!!
+	        
             if(move_uploaded_file($_FILES['fichierUpload']['tmp_name'], $dossier . $fichier))
             {
                 //echo '<a href = '. $dossier.$fichier.'>Afficherl le fichier que vous avez envoyé</a>';
-	            if($extentionUpload == "jpg" || $extentionUpload == "jpeg" ) // on vrée une ressource representatn
-		                                                                    // en fait l'image à miniaturiser
+	            
+	            // on vrée une ressource representatn
+	            // en fait l'image à miniaturiser
+	            if($extentionUpload == "jpg" || $extentionUpload == "jpeg" )
 	            {
 	            	$src = imagecreatefromjpeg($dossier.$fichier);
 	            }
@@ -33,7 +36,10 @@
 	            {
 	            	$src = imagecreatefromgif($dossier.$fichier);
 	            }
-	            $size = getimagesize($dossier.$fichier); // récupère les paramètres de notre image
+	            
+	            // récupère les paramètres de notre image
+	            $size = getimagesize($dossier.$fichier);
+	            
 	            // tester si la largeur de l'image est supérieur à sa longueur
 	            if($size[0] > $size[1])
 	            {

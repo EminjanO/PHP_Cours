@@ -6,7 +6,7 @@ function verif(fileId)
 	var extention = ['jpg', 'jpeg', 'gif', 'png'];
 	var x = refElem(fileId.id);
 	var txt = "";
-	//console.log(id.files[0]['name']);
+	//console.log(x.files[0]['name']);
 	if ('files' in x )
 	{
 		if (x.files.length == 0)

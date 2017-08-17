@@ -8,8 +8,9 @@ if(stripos($_SERVER['PHP_SELF'],___MATRICULE___)==FALSE) {
 	exit;
 } 
 else{
-	$__INFOS__ = array(   'matricule'=> ___MATRICULE___
-					,'host' => 'localhost'
+	$__INFOS__ = array(
+	                'matricule'=> ___MATRICULE___
+					,'host' => '193.190.65.94'
 					,'user' => 'OBULKASIM'
 					,'pswd' => 'Eminjan62bW'
 					,'dbName' => '1617he201365'
