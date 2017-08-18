@@ -14,7 +14,7 @@
         <script type="text/javascript" src="JS/utils.js"></script>
     </head>
 
-    <body onload="initialisation();">
+    <body onload="main();">
     <div id="global">
 
         <header id="entete">

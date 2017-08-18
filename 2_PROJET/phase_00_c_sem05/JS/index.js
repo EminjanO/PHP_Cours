@@ -4,9 +4,18 @@
 
 var data = new Object();
 
+function main(){
+	affiche("credit", false);
+	document.querySelector('a').focus();
+    // make "logo" clickable !!!
+	var logo = document.querySelector('#logo');
+	logo.dataset.url = "formLogo.html";
+	logo.setAttribute('onclick', "newAjaxJSON(this);");
+	logo.title = "Chargement du logo";
+}
 function affiche(id, b)  // afficher et cacher le crédit
 {
-    document.getElementById(id).style.display = b ? '' : 'none';
+	document.getElementById(id).style.display = b ? "block" : "none";
 }
 
 function ajaxHTML(a)
@@ -292,12 +301,4 @@ function newAjaxJSON(a)
 function sendForm(el)
 {
     return newAjaxJSON(el);
-}
-
-function initialisation()
-{
-    var logo = document.querySelector('#logo');
-    logo.dataset.url = "formLogo.html";
-    logo.setAttribute('onclick', "newAjaxJSON(this);");
-    logo.title = "Chargement du logo";
 }
